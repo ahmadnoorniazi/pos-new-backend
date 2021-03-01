@@ -39,10 +39,6 @@ const productSchema = new mongoose.Schema({
 	low_limit: {
 		type: Number,
 		required: true
-	},
-	actual_price: {
-		type: Number,
-		required: true
 	}
 });
 
