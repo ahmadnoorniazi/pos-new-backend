@@ -17,10 +17,6 @@ const ReceivedStock = new mongoose.Schema({
 		type: Number,
 		required: true
 	},
-	total_bill_amount: {
-		type: Number,
-		required: true
-	},
 	brand_name: {
 		type: String,
 		required: true

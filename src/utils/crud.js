@@ -199,6 +199,10 @@ export const createStock = (model, availableStockModel, brandModel, productModel
 	try {
 		const { product_id, product_quantity, brand_id } = req.body;
 
+		if (!product_id || !product_quantity || !brand_id) {
+			throw new Error('not valid data');
+		}
+
 		const brand = await brandModel.findOne({ _id: brand_id }).exec();
 		console.log('product modellll', productModel);
 		const product = await productModel.findOne({ _id: product_id }).exec();
