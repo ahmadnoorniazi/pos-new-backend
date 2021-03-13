@@ -121,8 +121,11 @@ async function updateAllProduct(availableStockModel, list) {
 }
 
 export const createBill = (model, availableStockModel) => async (req, res) => {
+	const { products, isSave } = req.body;
 	try {
-		await updateAllProduct(availableStockModel, req.body.products);
+		if (!isSave) {
+			await updateAllProduct(availableStockModel, products);
+		}
 		await model.create(req.body);
 
 		res.status(201).json({ message: 'Bill added into account' });
