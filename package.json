@@ -17,8 +17,15 @@
 	},
 	"nodemonConfig": {
 		"exec": "npm run dev",
-		"watch": [ "server/*", "public/*" ],
-		"ignore": [ "**/__tests__/**", "*.test.js", "*.spec.js" ]
+		"watch": [
+			"server/*",
+			"public/*"
+		],
+		"ignore": [
+			"**/__tests__/**",
+			"*.test.js",
+			"*.spec.js"
+		]
 	},
 	"author": "",
 	"license": "ISC",
@@ -32,6 +39,7 @@
 	},
 	"dependencies": {
 		"@babel/cli": "^7.8.4",
+		"@babel/compat-data": "^7.14.7",
 		"@babel/core": "^7.8.7",
 		"@babel/plugin-proposal-object-rest-spread": "^7.8.3",
 		"@babel/plugin-transform-runtime": "^7.8.3",
