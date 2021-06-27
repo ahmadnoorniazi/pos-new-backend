@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node ./app.bundle.js",
+		"start": "node ./build/index.js",
 		"build": "npm-run-all clean transpile",
 		"server": "yarn run webpack && node ./app.bundle.js",
 		"dev": "NODE_ENV=development npm-run-all build server",
