@@ -9,7 +9,7 @@
 		"server": "yarn run webpack && node ./build/app.bundle.js",
 		"dev": "NODE_ENV=development npm-run-all build server",
 		"prod": "NODE_ENV=production npm-run-all build server",
-		"transpile": "babel ./src --out-dir dist-server",
+		"transpile": "babel ./src --out-dir build",
 		"builds-ib": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
 		"clean": "rimraf dist-server",
 		"watch:dev": "nodemon",
