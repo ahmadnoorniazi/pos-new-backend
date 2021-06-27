@@ -31,10 +31,10 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(cookieParser());
 
 const storage = multer.diskStorage({
-	destination: function(req, file, cb) {
+	destination: function (req, file, cb) {
 		cb(null, './uploads/');
 	},
-	filename: function(req, file, cb) {
+	filename: function (req, file, cb) {
 		cb(null, Date.now() + file.originalname);
 	}
 });
@@ -79,7 +79,7 @@ app.use('/available_stock', AvailableStock);
 
 global.CronJob = require('./cron.js');
 
-app.portNumber = 3003;
+app.portNumber = 3000;
 
 function listen(port) {
 	app.portNumber = port;
@@ -87,7 +87,7 @@ function listen(port) {
 		.listen(port, () => {
 			console.log('server is running on port :' + app.portNumber);
 		})
-		.on('error', function(err) {
+		.on('error', function (err) {
 			if (err.errno === 'EADDRINUSE') {
 				console.log(`----- Port is Already Busy`);
 			} else {
