@@ -79,7 +79,7 @@ app.use('/available_stock', AvailableStock);
 
 global.CronJob = require('./cron.js');
 
-app.portNumber = process.env.PORT || 8080;
+app.portNumber = process.env.PORT || 8085;
 
 function listen(port) {
 	app.portNumber = port;

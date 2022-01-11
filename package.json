@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "node ./build/index.js",
 		"build": "npm-run-all clean transpile",
-		"server": "yarn run webpack && node ./app.bundle.js",
+		"server": "yarn run webpack && node ./build/app.bundle.js",
 		"dev": "NODE_ENV=development npm-run-all build server",
 		"prod": "NODE_ENV=production npm-run-all build server",
 		"transpile": "babel ./src --out-dir build",
